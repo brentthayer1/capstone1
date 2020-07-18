@@ -39,4 +39,3 @@ Capstone 1 Project for Galvanize Data Science Immersive
 	16. Sections: The number of sections the particular track has.
 	17. Target: The target variable for the track.
 
-
