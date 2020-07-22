@@ -1,15 +1,10 @@
-
-import matplotlib.pyplot as plt
 import numpy as np
-
+import pandas as pd
+import matplotlib.pyplot as plt
+import scipy.stats as stats
 
 def select_columns(df, columns):
     return df[columns]
-
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as pyplot
-import scipy.stats as stats
 
 def drop_duplicates(df):
     '''
@@ -37,6 +32,9 @@ def time_ms_to_sec(df):
     pop = df.pop('time_seconds')
     df.insert(3, 'time_seconds', pop)
 
+def drop_columns(df, cols):
+    df.drop(cols, axis=1, inplace=True)
+
 def check_for_nans(df, cols):
     '''
     Returns the number of NaNs for each specified column
@@ -48,19 +46,27 @@ def check_for_nans(df, cols):
     for col in cols:
         print(f'NaNs in {col}:', df['acousticness'].isnull().sum())
 
-def scatter_plot(df, x_col, y_col, alpha=0.5):
-    plt.scatter(df[x_col], df[y_col], alpha=alpha)
-    plt.show()
 
-def plot_hist(axs, dfs, names, col):
-    for ax, df, name in zip(axs, dfs, names):
-        ax.hist(df[col], bins=70)
+
+def plot_hists(axs, dfs, names, col, color_list):
+    for ax, df_, name, colr in zip(axs, dfs, names, color_list):
+        ax.hist(df_[col], bins=70, color=colr)
         ax.set_title(name)
-    fig.tight_layout()
+
+
+
+
+
 
 
 
 
 
 if __name__ == '__main__':
-    pass
+
+    file_path = '/Volumes/b/Galvanize/DS-RFT4/capstones-RFT4/datasets/music2/test1.csv'
+
+    df = pd.read_csv(file_path)
+    cols = ['artist_name', 'popularity', 'tempo']
+    
+    print(scatter_plot(df, df['popularity'], df['tempo']))
