@@ -62,6 +62,22 @@ def plot_hists_attribute(df_lst, column, color_list, df_name_lst):
         plt.show()
 
 
+def cdf(value, array):
+    return (array<value).sum() / len(array)
+
+
+vcdf = np.vectorize(cdf, excluded = ['array'])
+
+
+def scatter_cdf(df_lst, column, color_list, df_name_lst):
+    for frame, clr, name in zip(df_lst, color_list, df_name_lst):
+        data = frame[column]
+        cdf_ = vcdf(value = data, array = data)
+        plt.scatter(data, cdf_, s=2, color=clr, label=name, marker='.')
+        plt.xlabel(f'{column}')
+        plt.legend()
+        plt.title(f'{column} vs. popularity')
+        print(f'{name} Mean:{np.mean(data)}. St. Dev:{np.std(data)}')
 
 
 
