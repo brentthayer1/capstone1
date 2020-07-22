@@ -79,9 +79,19 @@ def scatter_cdf(df_lst, column, color_list, df_name_lst):
         plt.title(f'{column} vs. popularity')
         print(f'{name} Mean:{np.mean(data)}. St. Dev:{np.std(data)}')
 
+def scatter_cdf_no_descrip(df_lst, column, color_list, df_name_lst):
+    for frame, clr, name in zip(df_lst, color_list, df_name_lst):
+        data = frame[column]
+        cdf_ = vcdf(value = data, array = data)
+        plt.scatter(data, cdf_, s=2, color=clr, label=name, marker='.')
+        plt.xlabel(f'{column}')
+        plt.legend()
+        plt.title(f'{column} vs. popularity')
 
 
-
+def plot_dists_attribute(ax, df_, df_name, column):
+    ax = sns.distplot(df_[column], hist=False, label=df_name)
+    ax.legend()
 
 
 if __name__ == '__main__':
