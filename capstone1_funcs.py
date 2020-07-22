@@ -89,9 +89,15 @@ def scatter_cdf_no_descrip(df_lst, column, color_list, df_name_lst):
         plt.title(f'{column} vs. popularity')
 
 
-def plot_dists_attribute(ax, df_, df_name, column):
+def plot_dists_pdf(ax, df_, df_name, column):
     ax = sns.distplot(df_[column], hist=False, label=df_name)
     ax.legend()
+
+def plot_dists_cdf(ax, df_, df_name, column):
+    kwargs = {'cumulative': True}
+    ax = sns.distplot(df_[column], hist=False, hist_kws=kwargs, kde_kws=kwargs, label=df_name)
+    ax.legend()
+
 
 
 if __name__ == '__main__':
