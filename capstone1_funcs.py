@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import scipy.stats as stats
+import seaborn as sns
 
 def select_columns(df, columns):
     return df[columns]
@@ -48,12 +49,17 @@ def check_for_nans(df, cols):
 
 
 
-def plot_hists(axs, dfs, names, col, color_list):
-    for ax, df_, name, colr in zip(axs, dfs, names, color_list):
-        ax.hist(df_[col], bins=70, color=colr)
-        ax.set_title(name)
+def plot_hists_and_means(frame, columns, color_list):
+    for column, colr in zip(columns, color_list):
+        print(f'Mean value for {column}:', round(frame[column].mean(), 2))
+        sns.distplot(frame[column], color=colr)
+        plt.show()
 
-
+def plot_hists_attribute(df_lst, column, color_list, df_name_lst):
+    for df_, colr, name in zip(df_lst, color_list, df_name_lst):
+        print(f'Mean value for {column} in {name}:', round(df_[column].mean(), 2))
+        sns.distplot(df_[column], color=colr)
+        plt.show()
 
 
 
