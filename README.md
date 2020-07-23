@@ -63,14 +63,7 @@ Capstone 1 Project for Galvanize Data Science Immersive
 - I plotted the distributions of each subset together for each song attribute against popularity.  This gave a very nice clear view of some possible correlations.  The distributions that visually stood out to me the most were loudness, energy, and danceability.  I think the plots of these distributions clearly show that there is some sort of correlation with popularity.
 
 
-![time_seconds](/images/time_seconds.png)
-![acousticness](/images/acousticness.png)
-![danceability](/images/danceability.png)
-![energy](/images/energy.png)
-![liveness](/images/liveness.png)
-![loudness](/images/loudness.png)
-![tempo](/images/tempo.png)
-![valence](/images/valence.png)
+![time_seconds](/images/time_seconds.png) ![acousticness](/images/acousticness.png) ![danceability](/images/danceability.png) ![energy](/images/energy.png) ![liveness](/images/liveness.png) ![loudness](/images/loudness.png) ![tempo](/images/tempo.png) ![valence](/images/valence.png)
 
 
 - To look into this further, I decided to use the Spearman Correlation testing method to assesses how well the relationship between two attributes can be described.  I found the following correlations with popularity:
