@@ -102,3 +102,5 @@ Even though the correlation between popularity and every attribute is statistica
 To better a song's chance of being popular on Spotify, the main area of interest is maximizing the overall loudness.  The more energy and danceable a song is will also increase it's chances of becoming popular.
 
 I hope to further investigate the relationships between loudness, danceability, energy and tempo.  These four attributes seem like they all work together in some way.
+
+![scatter_matrix](/images/scatter_matrix.png)
