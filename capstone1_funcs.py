@@ -93,11 +93,17 @@ def plot_dists_pdf(ax, df_, df_name, column):
     ax = sns.distplot(df_[column], hist=False, label=df_name)
     ax.legend()
 
+
 def plot_dists_cdf(ax, df_, df_name, column):
     kwargs = {'cumulative': True}
     ax = sns.distplot(df_[column], hist=False, hist_kws=kwargs, kde_kws=kwargs, label=df_name)
     ax.legend()
 
+def plot_scatter(ax, column, df_, df_name, against):
+    ax.scatter(df_[column], df_[against], s=0.5, alpha=0.6, label=df_name)
+    # ax.scatter(df2[column], df2['popularity'], s=0.5, color='gray', alpha=0.5)
+    ax.set_xlabel(column)
+    ax.set_ylabel(against)
 
 
 if __name__ == '__main__':

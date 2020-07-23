@@ -31,3 +31,5 @@ Capstone 1 Project for Galvanize Data Science Immersive
 
 - For this project, I have ommitted instrumentalness, speechiness, time_signature, key, and mode.  A lot of this information is similar through the data set.  For example, the majority of the time_signatures are 4/4.
 
+## Exploration
+- I plotted the remaining attributes against popularity to try to get a visual to see where any correlations might be.  The attributes that stood out the most visually were loudness, energy, and danceability.
