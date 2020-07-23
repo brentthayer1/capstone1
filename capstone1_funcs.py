@@ -106,6 +106,12 @@ def plot_scatter(ax, column, df_, df_name, against):
     ax.set_ylabel(against)
 
 
+def spearman_correlation(frame, col1, col2):
+    a, b = frame[col1], frame[col2]
+    correlation, pvalue = stats.spearmanr(a, b)
+    print(f'{col1} and {col2} have a correlation of {round(correlation, 3)}, with a p-value of {pvalue:.3e}') 
+
+
 if __name__ == '__main__':
 
     file_path = '/Volumes/b/Galvanize/DS-RFT4/capstones-RFT4/datasets/music2/test1.csv'
