@@ -1,6 +1,4 @@
-# Capstone1
-
-Capstone 1 Project for Galvanize Data Science Immersive
+# What Makes A Song Popular
 
 ## Topics
 
