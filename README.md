@@ -95,4 +95,8 @@
 
 ## Conclusion
 
-Even though the correlation between popularity and every attribute is statistically significant, one has to wonder about the practical significance. The correlation between loudness and popularity is the most interesting to me. I am also interested in the time aspect of a song. I know that people have a short attention span, and was assuming I would see more of a correlation between popularity increasing as a song's length was shorter.
+Even though the correlation between popularity and every attribute is statistically significant, one has to wonder about the practical significance. The correlation between loudness and popularity stands out the most. I am also interested in the time aspect of a song. I know that people have a short attention span, and was assuming I would see more of a correlation between popularity increasing as a song's length was shorter.
+
+To better a song's chance of being popular on Spotify, the main area of interest is maximizing the overall loudness.  The more energy and danceable a song is will also increase it's chances of becoming popular.
+
+I hope to further investigate the relationships between loudness, danceability, energy and tempo.  These four attributes seem like they all work together in some way.
