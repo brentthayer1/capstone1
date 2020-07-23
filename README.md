@@ -64,6 +64,13 @@ Capstone 1 Project for Galvanize Data Science Immersive
 
 
 ![time_seconds](/images/time_seconds.png)
+![acousticness](/images/acousticness.png)
+![danceability](/images/danceability.png)
+![energy](/images/energy.png)
+![liveness](/images/liveness.png)
+![loudness](/images/loudness.png)
+![tempo](/images/tempo.png)
+![valence](/images/valence.png)
 
 
 - To look into this further, I decided to use the Spearman Correlation testing method to assesses how well the relationship between two attributes can be described.  I found the following correlations with popularity:
