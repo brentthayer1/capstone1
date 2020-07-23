@@ -19,20 +19,20 @@ Capstone 1 Project for Galvanize Data Science Immersive
 ## Data Description
 
 - Each song is classified by 14 qualities.
-    1. Acousticness: A confidence measure from 0.0 to 1.0 of whether the track is acoustic.
-    2. Danceability: How suitable a track is for dancing. A value of 0.0 is least danceable and 1.2. is most danceable.
-	3. Duration_ms: The duration of the track in milliseconds.
-    4. Energy: Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity.
-	5. Instrumentalness: Predicts whether a track contains no vocals from 0.0 to 1.0
-    6. Key: The estimated overall key of the track using standard Pitch Class notation.
-	7. Liveness: Detects the presence of an audience in the recording from 0.0 to 1.0.
-    8. Loudness: The overall loudness of a track in decibels (dB) between -60 and 0 db.
-	9. Mode: Mode indicates the modality (major or minor) of a track. Major is represented by 1 and minor is 0.
-	10. Speechiness: Speechiness detects the presence of spoken words in a track from 0 - 1.
-	11. Tempo: The overall estimated tempo of a track in beats per minute (BPM).
-	12. Time_signature: An estimated overall time signature of a track.
-	13. Valence: A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track.
-	14. Popularity: A measure of a song's popularity measured from 0-100.
+    - Acousticness: A confidence measure from 0.0 to 1.0 of whether the track is acoustic.
+    - Danceability: How suitable a track is for dancing. A value of 0.0 is least danceable and 1.2. is most danceable.
+	- Duration_ms: The duration of the track in milliseconds.
+    - Energy: Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity.
+	- Instrumentalness: Predicts whether a track contains no vocals from 0.0 to 1.0
+    - Key: The estimated overall key of the track using standard Pitch Class notation.
+	- Liveness: Detects the presence of an audience in the recording from 0.0 to 1.0.
+    - Loudness: The overall loudness of a track in decibels (dB) between -60 and 0 db.
+	- Mode: Mode indicates the modality (major or minor) of a track. Major is represented by 1 and minor is 0.
+	- Speechiness: Speechiness detects the presence of spoken words in a track from 0 - 1.
+	- Tempo: The overall estimated tempo of a track in beats per minute (BPM).
+	- Time_signature: An estimated overall time signature of a track.
+	- Valence: A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track.
+	- Popularity: A measure of a song's popularity measured from 0-100.
 
 - For this project, I have ommitted Instrumentalness, Speechiness, Time Signature, Key, and Mode.  These attributes were relatively distributed evenly across the dataset, leaving for little to analyze in terms of a correlation between themselves and popularity.
 
@@ -62,31 +62,34 @@ Capstone 1 Project for Galvanize Data Science Immersive
 
 - I plotted the distributions of each subset together for each song attribute against popularity.  This gave a very nice clear view of some possible correlations.  The distributions that visually stood out to me the most were loudness, energy, and danceability.  I think the plots of these distributions clearly show that there is some sort of correlation with popularity.
 
+
+![time_seconds_cdf](/Volumes/b/Galvanize/DS-RFT4/capstones-RFT4/capstone1/images/time_seconds_cdf)
+
 - To look into this further, I decided to use the Spearman Correlation testing method to assesses how well the relationship between two attributes can be described.  I found the following correlations with popularity:
 
     - Loudness-
-        - Correlation of 0.263, with a p-value of 0.0. 
+        - Correlation of 0.263, with a p-value of 0.0.
         - As a song gets louder than its popularity will go up.
     - Danceability-
-        - Correlation of 0.183, with a p-value of 0.0. 
+        - Correlation of 0.183, with a p-value of 0.0.
         - As a song's danceability value increases than its popularity will go up.
-    - Energy- 
-        - Correlation of 0.123, with a p-value of 0.0. 
+    - Energy-
+        - Correlation of 0.123, with a p-value of 0.0.
         - As a song's energy increases than its popularity will go up.
-    - Valence- 
-        - Correlation of 0.056, with a p-value of 2.658326249179174e-73. 
-        - As a song's valence increases than its popularity will go up.  
-    - Tempo- 
-        - Correlation of 0.038, with a p-value of 2.185627825374629e-35. 
+    - Valence-
+        - Correlation of 0.056, with a p-value of 2.658326249179174e-73.
+        - As a song's valence increases than its popularity will go up.
+    - Tempo-
+        - Correlation of 0.038, with a p-value of 2.185627825374629e-35.
         - As a song's tempo increases than its popularity will go up.
-    - Time- 
-        - Correlation of -0.009, with a p-value of 0.0055977699952641236. 
+    - Time-
+        - Correlation of -0.009, with a p-value of 0.0055977699952641236.
         - As a song's length increases than its popularity will go down.
-    - Liveness- 
-        - Correlation of -0.024, with a p-value of 4.101749967807702e-15. 
+    - Liveness-
+        - Correlation of -0.024, with a p-value of 4.101749967807702e-15.
         - As a song's sense of liveness increases than its popularity will go down.
-    - Acousticness- 
-        - Correlation of -0.099, with a p-value of 1.2290236449990221e-228. 
+    - Acousticness-
+        - Correlation of -0.099, with a p-value of 1.2290236449990221e-228.
         - As a song's acousticness value increases than its popularity will go down.
 
 ## Conclusion
