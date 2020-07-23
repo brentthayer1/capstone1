@@ -49,11 +49,9 @@ def check_for_nans(df, cols):
 
 
 
-def plot_hists_and_means(frame, columns, color_list):
-    for column, colr in zip(columns, color_list):
-        print(f'Mean value for {column}:', round(frame[column].mean(), 2))
-        sns.distplot(frame[column], color=colr)
-        plt.show()
+def plot_hist_and_means(ax, df_, column):
+    ax = sns.distplot(df_[column])
+    ax.set_title(f'{column} mean: {round(df_[column].mean(), 2)}')
 
 def plot_hists_attribute(df_lst, column, color_list, df_name_lst):
     for df_, colr, name in zip(df_lst, color_list, df_name_lst):
@@ -111,6 +109,9 @@ def spearman_correlation(frame, col1, col2):
     correlation, pvalue = stats.spearmanr(a, b)
     print(f'{col1} and {col2} have a correlation of {round(correlation, 3)}, with a p-value of {pvalue:.3e}') 
 
+def plot_correlations(df_, columns):
+    Var_Corr = df_[columns].corr()
+    sns.heatmap(Var_Corr, xticklabels=Var_Corr.columns, yticklabels=Var_Corr.columns, annot=True)
 
 if __name__ == '__main__':
 
