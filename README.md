@@ -38,7 +38,7 @@ Capstone 1 Project for Galvanize Data Science Immersive
 
 - In the initial dataset there were 130,663 songs.  22,106 of these scored a 0 and 1 for popularity.  I thought this was very interesting, and could not wrap my mind around how 17% of songs would be this low.  I found it hard to believe that even the worst of the worst songs would still be considered a 0 or a 1.  I decided after careful consideration to omit these.  My thoughts are that they could have possibly been NaNs initially at some point.  This omition slimmed the dataset down to 106,040 songs.
 
-![attribute_dists](/images/valence.png)
+![attribute_dists](/images/attribute_dists.png)
 
 ## Exploration
 
