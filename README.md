@@ -93,6 +93,8 @@
         - Correlation of -0.099, with a p-value of 1.2290236449990221e-228.
         - As a song's acousticness value increases than its popularity will go down.
 
+![attribute_heat_map](/images/attribute_heat_map.png)
+
 ## Conclusion
 
 Even though the correlation between popularity and every attribute is statistically significant, one has to wonder about the practical significance. The correlation between loudness and popularity stands out the most. I am also interested in the time aspect of a song. I know that people have a short attention span, and was assuming I would see more of a correlation between popularity increasing as a song's length was shorter.
