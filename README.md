@@ -44,21 +44,21 @@
 
 - With the remaining data, I wanted to distribute it fairly evenly into similar sized groups.  My group selections were based on the following popularity ratings:
     -   df_52:  13,680 songs
-        12.24% percent of the dataset.   52 < Popularity >= 86
+        12.9% percent of the dataset.   52 < Popularity >= 86
     -   df_41:  13,267 songs
-        11.87% percent of the dataset.   41 < Popularity >= 52
+        12.51% percent of the dataset.   41 < Popularity >= 52
     -   df_33:  12,794 songs
-        11.45% percent of the dataset.   33 < Popularity >= 41
+        12.07% percent of the dataset.   33 < Popularity >= 41
     -   df_26:  14,363 songs
-        12.85% percent of the dataset.    26 < Popularity >= 33
+        13.54% percent of the dataset.    26 < Popularity >= 33
     -   df_20:  13,562 songs
-        12.13% percent of the dataset.     20 < Popularity >= 26
+        12.79% percent of the dataset.     20 < Popularity >= 26
     -   df_14:  14,268 songs
-        12.77% percent of the dataset.    14 < Popularity >= 20
+        13.46% percent of the dataset.    14 < Popularity >= 20
     -   df_7:   14,447 songs
-        12.93% percent of the dataset.   7 < Popularity >= 14
+        13.62% percent of the dataset.   7 < Popularity >= 14
     -   df_1:    9,521 songs
-        8.52% percent of the dataset.   1 < Popularity >= 7
+        8.98% percent of the dataset.   1 < Popularity >= 7
 
 - I plotted the distributions of each subset together for each song attribute against popularity.  This gave a very nice clear view of some possible correlations.  The distributions that visually stood out to me the most were loudness, energy, and danceability.  I think the plots of these distributions clearly show that there is some sort of correlation with popularity.
 
