@@ -50,7 +50,7 @@ def check_for_nans(df, cols):
 
 
 def plot_hist_and_means(ax, df_, column):
-    ax = sns.distplot(df_[column])
+    sns.distplot(df_[column], ax=ax,)
     ax.set_title(f'{column} mean: {round(df_[column].mean(), 2)}')
 
 def plot_hists_attribute(df_lst, column, color_list, df_name_lst):
@@ -87,21 +87,51 @@ def scatter_cdf_no_descrip(df_lst, column, color_list, df_name_lst):
         plt.title(f'{column} vs. popularity')
 
 
-def plot_dists_pdf(ax, df_, df_name, column):
-    ax = sns.distplot(df_[column], hist=False, label=df_name)
-    ax.legend()
+
+def plot_dists_pdf(ax, df_, column, low, high):
+    sns.distplot(df_[column], hist=False, ax=ax)
+    ax.set_xlim(low, high)
+    ax.set_title(f'{column} pdf')
+    # ax.legend()
 
 
-def plot_dists_cdf(ax, df_, df_name, column):
+def plot_dists_cdf(ax, df_, column, low, high):
     kwargs = {'cumulative': True}
-    ax = sns.distplot(df_[column], hist=False, hist_kws=kwargs, kde_kws=kwargs, label=df_name)
-    ax.legend()
+    sns.distplot(df_[column], hist=False, hist_kws=kwargs, kde_kws=kwargs, ax=ax)
+    ax.set_xlim(low, high)
+    ax.set_title(f'{column} cdf')
+    # ax.legend()
 
-def plot_scatter(ax, column, df_, df_name, against):
-    ax.scatter(df_[column], df_[against], s=0.5, alpha=0.6, label=df_name)
-    # ax.scatter(df2[column], df2['popularity'], s=0.5, color='gray', alpha=0.5)
+
+def plot_scatter(ax, df_, column, against, low, high):
+    ax.scatter(df_[column], df_[against], s=0.5, alpha=0.6)
+    ax.set_xlim(low, high)
     ax.set_xlabel(column)
     ax.set_ylabel(against)
+    ax.set_title(f'{column} vs. {against}')
+
+def dfs_info_list(df_lst, df_name_lst, column):
+    lst = []
+    for df_, df_name in zip(df_lst, df_name_lst):
+        lst.append(f'{df_name}  Mean: {np.mean(df_[column]):0.03f}  Std Dev: {np.std(df_[column]):0.03f}')
+    return lst
+
+def master_plotter(df_lst, df_name_lst, column, against, low, high, fs):
+    info = dfs_info_list(df_lst, df_name_lst, column)
+    fig, ax = plt.subplots(2,2, figsize=fs)
+    for df_ in df_lst:
+        plot_dists_cdf(ax[0][0], df_, column, low, high)
+        plot_dists_pdf(ax[0][1], df_, column, low, high)
+        plot_scatter(ax[1][0], df_, column, against, low, high)  
+        ax[1][1].set_xticks([])
+        ax[1][1].set_yticks([])
+    fig.legend(info, bbox_to_anchor=(.60, .43), loc=2, borderaxespad=0., fontsize='large', markerscale=5., frameon=False)
+    fig.tight_layout()
+
+
+
+
+
 
 
 def spearman_correlation(frame, col1, col2):
