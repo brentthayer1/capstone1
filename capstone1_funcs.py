@@ -218,7 +218,7 @@ def master_plotter(df_lst, df_name_lst, column, against, low, high, fs):
         plot_scatter(ax[1][0], df_, column, against, low, high)
         ax[1][1].set_xticks([])
         ax[1][1].set_yticks([])
-    fig.legend(info, bbox_to_anchor=(.60, .43), loc=2, borderaxespad=0., fontsize='large', markerscale=5., frameon=False)
+    fig.legend(info, bbox_to_anchor=(.60, .43), loc=2, borderaxespad=0., fontsize='medium', markerscale=5., frameon=False)
     fig.tight_layout()
 
 
