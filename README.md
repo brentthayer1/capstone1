@@ -45,7 +45,7 @@ With the remaining data, I wanted to distribute it fairly evenly into similar si
 | df_20    | 13,562 |       12.79%    | > 20, <= 26  |
 | df_14    | 14,268 |       13.46%    | > 14, <= 20  |
 | df_7     | 14,447 |       13.62%    | > 7, <= 14   |
-| df_1     |  9,521 |       8.98%     | > 1, <= 7    |
+| df_1     |  9,521 |       11.35%     | > 1, <= 7    |
 
 ## Visualization
 
@@ -59,7 +59,7 @@ I plotted the distributions of each subset together for each song attribute agai
 ### Acousticness: How acoustic a song is.  A value of 0.0 is the least acoustic and 1.0 is the most acoustic.
 ![acousticness](/images/acousticness.png)
 
-### Danceability: How suitable a track is for dancing. A value of 0.0 is least danceable and 1.2. is most danceable.
+### Danceability: How suitable a track is for dancing. A value of 0.0 is least danceable and 1.2 is most danceable.
 ![danceability](/images/danceability.png)
 
 ### Energy: A perceptual measure of how energetic a song is.  A value of 0.0 is least energetic and 1.0 is is most energetic.
