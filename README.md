@@ -73,30 +73,16 @@
 
 - To look into these correlations further, I decided to use the Spearman Correlation testing method to assess how well the relationship between two attributes can be described.  I found the following correlations with popularity:
 
-    - Loudness-
-        - Correlation of 0.263, with a p-value of 0.0.
-        - As a song gets louder than its popularity will go up.
-    - Danceability-
-        - Correlation of 0.183, with a p-value of 0.0.
-        - As a song's danceability value increases than its popularity will go up.
-    - Energy-
-        - Correlation of 0.123, with a p-value of 0.0.
-        - As a song's energy increases than its popularity will go up.
-    - Valence-
-        - Correlation of 0.056, with a p-value of 2.658326249179174e-73.
-        - As a song's valence increases than its popularity will go up.
-    - Tempo-
-        - Correlation of 0.038, with a p-value of 2.185627825374629e-35.
-        - As a song's tempo increases than its popularity will go up.
-    - Time-
-        - Correlation of -0.009, with a p-value of 0.0055977699952641236.
-        - As a song's length increases than its popularity will go down.
-    - Liveness-
-        - Correlation of -0.024, with a p-value of 4.101749967807702e-15.
-        - As a song's sense of liveness increases than its popularity will go down.
-    - Acousticness-
-        - Correlation of -0.099, with a p-value of 1.2290236449990221e-228.
-        - As a song's acousticness value increases than its popularity will go down.
+| Attribute    | Correlation | P-Value    |
+| ------------ | ----------- | ---------- |
+| loudness     | 0.263       | 0.000e+00  |
+| danceability | 0.183       | 0.000e+00  |
+| energy       | 0.123       | 0.000e+00  |
+| valence      | 0.056       | 2.658e-73  |
+| tempo        | 0.038       | 2.186e-35  |
+| time_seconds | -0.009      | 5.598e-03  |
+| liveness     | -0.024      | 4.102e-15  |
+| acousticness | -0.099      | 1.229e-228 |
 
 ![attribute_heat_map](/images/attribute_heat_map.png)
 
@@ -109,24 +95,3 @@ To better a song's chance of being popular on Spotify, the main area of interest
 I hope to further investigate the relationships between loudness, danceability, energy and tempo.  These four attributes seem like they all work together in some way.
 
 ![scatter_matrix](/images/scatter_matrix.png)
-
-
-
-
-
--   df_52:  13,680 songs
-    12.9% percent of the dataset.   52 < Popularity >= 86
--   df_41:  13,267 songs
-    12.51% percent of the dataset.   41 < Popularity >= 52
--   df_33:  12,794 songs
-    12.07% percent of the dataset.   33 < Popularity >= 41
--   df_26:  14,363 songs
-    13.54% percent of the dataset.    26 < Popularity >= 33
--   df_20:  13,562 songs
-    12.79% percent of the dataset.     20 < Popularity >= 26
--   df_14:  14,268 songs
-    13.46% percent of the dataset.    14 < Popularity >= 20
--   df_7:   14,447 songs
-    13.62% percent of the dataset.   7 < Popularity >= 14
--   df_1:    9,521 songs
-    8.98% percent of the dataset.   1 < Popularity >= 7
