@@ -22,7 +22,7 @@
 
 - For this project, I have ommitted Instrumentalness, Speechiness, Time Signature, Key, and Mode.  These attributes were relatively distributed evenly across the dataset, leaving for little to analyze in terms of a correlation between themselves and popularity.
 
-- In the initial dataset there were 130,663 songs.  22,106 of these scored a 0 and 1 for popularity.  I thought this was very interesting, and could not wrap my mind around how 17% of songs would be this low.  I found it hard to believe that even the worst of the worst songs would still be considered a 0 or a 1.  I decided after careful consideration to omit these.  My thoughts are that they could have possibly been NaNs initially at some point.  This omition slimmed the dataset down to 106,040 songs.
+- In the initial dataset there were 130,663 songs.  22,106 of these scored a 0 and 1 for popularity.  I thought this was very interesting, and could not wrap my mind around how 17% of songs would be this low.  I found it hard to believe that even the worst of the worst songs would still be considered a 0 or a 1.  I decided after careful consideration to omit these.  My thoughts are that they could have possibly been NaNs initially at some point.  This omission slimmed the dataset down to 106,040 songs.
 
 ![attribute_dists](/images/attribute_dists.png)
 
@@ -46,35 +46,35 @@
 
 - I plotted the distributions of each subset together for each song attribute against popularity.  This gave a very nice clear view of some possible correlations.  The distributions that visually stood out to me the most were loudness, energy, and danceability.  I think the plots of these distributions clearly show that there is some sort of correlation with popularity.
 
-## popularity: A measure from 0 to 100 that represents a song's popularity on Spotify
+### Popularity: A measure from 0 to 100 that represents a song's popularity on Spotify
 
-### time_seconds: The duration of the track in seconds.
+### Time: The duration of the track in seconds.
 ![time_seconds](/images/time_seconds.png)
 
-### acousticness: A confidence measure from 0.0 to 1.0 of whether the track is acoustic.
+### Acousticness: A confidence measure from 0.0 to 1.0 of whether the track is acoustic.
 ![acousticness](/images/acousticness.png)
 
-### danceability: How suitable a track is for dancing. A value of 0.0 is least danceable and 1.2. is most danceable.
+### Danceability: How suitable a track is for dancing. A value of 0.0 is least danceable and 1.2. is most danceable.
 ![danceability](/images/danceability.png)
 
-### energy: A measure from 0.0 to 1.0 that represents a perceptual measure of intensity and activity.
+### Energy: A measure from 0.0 to 1.0 that represents a perceptual measure of intensity and activity.
 ![energy](/images/energy.png)
 
-### liveness: Detects the presence of an audience in the recording from 0.0 to 1.0.
+### Liveness: Detects the presence of an audience in the recording from 0.0 to 1.0.
 ![liveness](/images/liveness.png)
 
-### loudness: The overall loudness of a track in decibels (dB) between -60 and 0 db.
+### Loudness: The overall loudness of a track in decibels (dB) between -60 and 0 db.
 ![loudness](/images/loudness.png)
 
-### tempo: The overall estimated tempo of a track in beats per minute (BPM).
+### Tempo: The overall estimated tempo of a track in beats per minute (BPM).
 ![tempo](/images/tempo.png)
 
-### valence: A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track.
+### Valence: A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track.
 ![valence](/images/valence.png)
 
+## Correlation Testing
 
-
-- To look into these correlations further, I decided to use the Spearman Correlation testing method to assess how well the relationship between two attributes can be described.  I found the following correlations with popularity:
+To look into these correlations further, I decided to use the Spearman Correlation testing method to assess how well the relationship between two attributes can be described.  I found the following correlations with popularity:
 
 | Attribute    | Correlation | P-Value    |
 | :----------: | :---------: | :--------: |
@@ -89,6 +89,8 @@
 
 ![attribute_heat_map](/images/attribute_heat_map.png)
 
+Applying a Bonferroni correction against my alpha value of 0.05, I concluded that each attribute and it's correlation with popularity was statistically significant.
+
 ## Conclusion
 
 Even though the correlation between popularity and every attribute is statistically significant, I wondered about the practical significance. The correlation between loudness and popularity stands out the most. I am also interested in the time aspect of a song. I know that people have a short attention span, and was assuming I would see more of a correlation between popularity increasing as a song's length was shorter.
@@ -102,3 +104,4 @@ I also hope to pull in some data on possibly location of where common listeners 
 ## References
 
 
+https://pngio.com/images/png-a681054.html
