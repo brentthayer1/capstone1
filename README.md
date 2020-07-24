@@ -9,7 +9,7 @@ How can attributes of a recorded song be analyzed, and how do these different at
 ## Description
 
 - I am seeking a better understanding of how different attributes of a song correlate to each other.
-- I plan to do a comparative analysis on attribute's rankings using the Spearman Correlation testing method.
+- I plan to do a comparative analysis on attributes' rankings using the Spearman Correlation testing method.
 - After looking through the data initially, there are a few key attributes that I really want to explore.  I am most interested in seeing the correlation between popularity and loudness.  My hypothesis going into this is that a louder song is more popular.  I am curious as to how to put a number on this correlation though.  My secondary hypothesis is that a song's length has an impact on popularity as well.  Given the short attention span of the general population, I would assume that a shorter song length would increase the popularity to some degree.
 
 ## Data Source
@@ -18,11 +18,11 @@ This is a dataset which was obtained using Spotify's web API.  This dataset was 
 
 ## Data Description
 
-This dataset is from April 2019
+This dataset is from April 2019.
 
-Each song is classified by 14 qualities: Acousticness, Danceability, Duration, Energy, Instrumentalness, Key, Liveness, Loudness, Mode, Speechiness, Tempo, Time_signature, Valence and Popularity.
+Each song in this dataset is classified by 14 qualities: Acousticness, Danceability, Duration, Energy, Instrumentalness, Key, Liveness, Loudness, Mode, Speechiness, Tempo, Time_signature, Valence and Popularity.
 
-For this project, I have ommitted Instrumentalness, Speechiness, Time Signature, Key, and Mode.  These attributes were relatively distributed evenly across the dataset, leaving for little to analyze in terms of a correlation between themselves and popularity.
+For this project, I have ommitted Instrumentalness, Speechiness, Time_Signature, Key, and Mode.  These attributes were relatively distributed evenly across the dataset, leaving little to analyze in terms of a correlation between themselves and popularity.
 
 In the initial dataset there were 130,663 songs.  17% of these scored a 0 and 1 for popularity.  I thought this was very interesting, and could not wrap my mind around how this percentage of the songs could be this low.  I found it hard to believe that even the worst of the worst songs would still be considered a 0 or a 1.  I decided after careful consideration to omit these.  My thoughts are that they could have possibly been NaNs initially at some point.  This omission slimmed the dataset down to 108,557 songs.
 
@@ -55,25 +55,25 @@ I plotted the distributions of each subset together for each song attribute agai
 ### Time: The duration of the track in seconds.
 ![time_seconds](/images/time_seconds.png)
 
-### Acousticness: A confidence measure from 0.0 to 1.0 of whether the track is acoustic.
+### Acousticness: How acoustic a song is.  A value of 0.0 is the least acoustic and 1.0 is the most acoustic.
 ![acousticness](/images/acousticness.png)
 
 ### Danceability: How suitable a track is for dancing. A value of 0.0 is least danceable and 1.2. is most danceable.
 ![danceability](/images/danceability.png)
 
-### Energy: A measure from 0.0 to 1.0 that represents a perceptual measure of intensity and activity.
+### Energy: A perceptual measure of how energetic a song is.  A value of 0.0 is least energetic and 1.0 is is most energetic.
 ![energy](/images/energy.png)
 
-### Liveness: Detects the presence of an audience in the recording from 0.0 to 1.0.
+### Liveness: Detects the presence of an audience.  A value of 0.0 is no audience and 1.0 is entirely live.
 ![liveness](/images/liveness.png)
 
-### Loudness: The overall loudness of a track in decibels (dB) between -60 and 0 db.
+### Loudness: The overall loudness of a track in decibels.  A value of -60 is quiet and 0 db is loudest.
 ![loudness](/images/loudness.png)
 
-### Tempo: The overall estimated tempo of a track in beats per minute (BPM).
+### Tempo: The overall estimated tempo of a track in beats per minute.
 ![tempo](/images/tempo.png)
 
-### Valence: A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track.
+### Valence: The musical positiveness conveyed by a track.  A value of 0.0 has the lowest positivty and 1.0 has the highest positivity.
 ![valence](/images/valence.png)
 
 ## Correlation Testing
@@ -93,16 +93,19 @@ To look into these correlations further, I decided to use the Spearman Correlati
 
 ![attribute_heat_map](/images/attribute_heat_map.png)
 
-I applied a Bonferroni correction against my alpha value of 0.05 initially, and concluded that each attribute and it's correlation with popularity was statistically significant.
 
 ## Conclusion
 
-My findings convinced me that there is a statistically significant correlation between popularity and a song's attributes. The correlation between loudness and popularity stands out the most.  The attribute I am surprised by the most though is time. time aspect of a song. I know that people have a short attention span, and was assuming I would see more of a correlation between popularity increasing as a song's length was shorter.
+My findings convinced me that there is a statistically significant correlation between popularity and a song's attributes. The correlation between loudness and popularity stands out the most.  The attribute I am surprised by the most though is time aspect of a song.  I know that people have a short attention span, and was assuming I would see more of a correlation between popularity increasing as a song's length was shorter.
+
+Another area that caught my attention was the variance between subsets for each attribute.  As the popularity decreased, the the attribute varied more.  A lot of attributes had similar means, but what this tells me is that drifting away from those averages brings popularity down.
 
 ## Further Exploration
 
 I hope to further investigate the relationships between loudness, danceability, energy and tempo.  These four attributes seem like they all work together in some way.
 
 I would like to create an algorithm that does all of the work of separating the data set into smaller, fairly evenly distributed subsets.  This algorithm would be the final piece needed to create more of a pipline to make it easier to run an analysis on any other attribute.
+
+I think it would be interested to pull information into here about genre as well.
 
 I also hope to pull in some data on locations of where common listeners are located.  I think it would be interesting to see how different parts of the country prefer their music.
