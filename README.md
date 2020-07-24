@@ -16,21 +16,7 @@
 
 ## Data Description
 
-- Each song is classified by 14 qualities.
-    - Acousticness: A confidence measure from 0.0 to 1.0 of whether the track is acoustic.
-    - Danceability: How suitable a track is for dancing. A value of 0.0 is least danceable and 1.2. is most danceable.
-	- Duration_ms: The duration of the track in milliseconds.
-    - Energy: Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity.
-	- Instrumentalness: Predicts whether a track contains no vocals from 0.0 to 1.0
-    - Key: The estimated overall key of the track using standard Pitch Class notation.
-	- Liveness: Detects the presence of an audience in the recording from 0.0 to 1.0.
-    - Loudness: The overall loudness of a track in decibels (dB) between -60 and 0 db.
-	- Mode: Mode indicates the modality (major or minor) of a track. Major is represented by 1 and minor is 0.
-	- Speechiness: Speechiness detects the presence of spoken words in a track from 0 - 1.
-	- Tempo: The overall estimated tempo of a track in beats per minute (BPM).
-	- Time_signature: An estimated overall time signature of a track.
-	- Valence: A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track.
-	- Popularity: A measure of a song's popularity measured from 0-100.
+- Each song is classified by 14 qualities: Acousticness, Danceability, Duration, Energy, Instrumentalness, Key, Liveness, Loudness, Mode, Speechiness, Tempo, Time_signature, Valence and Popularity.
 
 - For this project, I have ommitted Instrumentalness, Speechiness, Time Signature, Key, and Mode.  These attributes were relatively distributed evenly across the dataset, leaving for little to analyze in terms of a correlation between themselves and popularity.
 
@@ -63,7 +49,35 @@
 - I plotted the distributions of each subset together for each song attribute against popularity.  This gave a very nice clear view of some possible correlations.  The distributions that visually stood out to me the most were loudness, energy, and danceability.  I think the plots of these distributions clearly show that there is some sort of correlation with popularity.
 
 
-![time_seconds](/images/time_seconds.png) ![acousticness](/images/acousticness.png) ![danceability](/images/danceability.png) ![energy](/images/energy.png) ![liveness](/images/liveness.png) ![loudness](/images/loudness.png) ![tempo](/images/tempo.png) ![valence](/images/valence.png)
+![time_seconds](/images/time_seconds.png)
+time_seconds: The duration of the track in seconds.
+
+![acousticness](/images/acousticness.png)
+- acousticness: A confidence measure from 0.0 to 1.0 of whether the track is acoustic.
+
+![danceability](/images/danceability.png)
+danceability: How suitable a track is for dancing. A value of 0.0 is least danceable and 1.2. is most danceable.
+
+![energy](/images/energy.png)
+
+energy: Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity.
+
+![liveness](/images/liveness.png)
+
+liveness: Detects the presence of an audience in the recording from 0.0 to 1.0.
+
+
+![loudness](/images/loudness.png)
+
+loudness: The overall loudness of a track in decibels (dB) between -60 and 0 db.
+
+![tempo](/images/tempo.png)
+
+tempo: The overall estimated tempo of a track in beats per minute (BPM).
+
+![valence](/images/valence.png)
+
+valence: A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track.
 
 
 - To look into this further, I decided to use the Spearman Correlation testing method to assesses how well the relationship between two attributes can be described.  I found the following correlations with popularity:
