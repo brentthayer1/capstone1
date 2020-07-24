@@ -161,7 +161,7 @@ def plot_scatter(ax, df_, column, against, low, high):
         Scatter plot of specified columns
     """
 
-    ax.scatter(df_[column], df_[against], s=0.5, alpha=0.3, marker='.')
+    ax.scatter(df_[column], df_[against], s=0.5, alpha=0.5, marker='.')
     ax.set_xlim(low, high)
     ax.set_xlabel(column)
     ax.set_ylabel(against)
@@ -219,7 +219,7 @@ def master_plotter(df_lst, df_name_lst, column, against, low, high, fs):
         plot_scatter(ax[1][0], df_, column, against, low, high)
         ax[1][1].set_xticks([])
         ax[1][1].set_yticks([])
-    fig.legend(info, bbox_to_anchor=(.60, .43), loc=2, borderaxespad=0., fontsize='medium', markerscale=5., frameon=False)
+    fig.legend(info, bbox_to_anchor=(.60, .43), loc=2, borderaxespad=0., fontsize='medium', markerscale=9, frameon=False)
     fig.tight_layout()
 
 
@@ -254,7 +254,7 @@ def plot_correlations(df_, columns):
     """
 
     Var_Corr = df_[columns].corr()
-    sns.heatmap(Var_Corr, xticklabels=Var_Corr.columns, yticklabels=Var_Corr.columns, annot=True)
+    sns.heatmap(Var_Corr, xticklabels=Var_Corr.columns, yticklabels=Var_Corr.columns, annot=True, cmap='Blues')
 
 
 
