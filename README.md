@@ -32,14 +32,14 @@
 
 | Subset   | Songs  | Percent of Data | Popularity   |
 | -------- | ------ | --------------- | ------------ |
-| df_52:   | 13,680 |       12.9%     | 52 < p >= 86 |
-| df_41:   | 13,267 |       12.51%    | 41 < p >= 52 |
-| df_33:   | 12,794 |       12.07%    | 33 < p >= 41 |
-| df_26:   | 14,363 |       13.54%    | 26 < p >= 33 |
-| df_20:   | 13,562 |       12.79%    | 20 < p >= 26 |
-| df_14:   | 14,268 |       13.46%    | 14 < p >= 20 |
-| df_7:    | 14,447 |       13.62%    | 7 < p >= 14  |
-| df_1:    |  9,521 |       8.98%     | 1 < p >= 7   |
+| df_52:   | 13,680 |       12.9%     | >52, <=86    |
+| df_41:   | 13,267 |       12.51%    | >41, <=52    |
+| df_33:   | 12,794 |       12.07%    | >33, <=41    |
+| df_26:   | 14,363 |       13.54%    | >26, <=33    |
+| df_20:   | 13,562 |       12.79%    | >20, <=26    |
+| df_14:   | 14,268 |       13.46%    | >14, <=20    |
+| df_7:    | 14,447 |       13.62%    | >7, <=14     |
+| df_1:    |  9,521 |       8.98%     | >1, <=7      |
 
 - I plotted the distributions of each subset together for each song attribute against popularity.  This gave a very nice clear view of some possible correlations.  The distributions that visually stood out to me the most were loudness, energy, and danceability.  I think the plots of these distributions clearly show that there is some sort of correlation with popularity.
 
