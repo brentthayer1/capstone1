@@ -215,7 +215,7 @@ def master_plotter(df_lst, df_name_lst, column, against, low, high, fs):
     for df_ in df_lst:
         plot_dists_cdf(ax[0][0], df_, column, low, high)
         plot_dists_pdf(ax[0][1], df_, column, low, high)
-        plot_scatter(ax[1][0], df_, column, against, low, high)  
+        plot_scatter(ax[1][0], df_, column, against, low, high)
         ax[1][1].set_xticks([])
         ax[1][1].set_yticks([])
     fig.legend(info, bbox_to_anchor=(.60, .43), loc=2, borderaxespad=0., fontsize='large', markerscale=5., frameon=False)
