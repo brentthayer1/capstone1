@@ -15,7 +15,7 @@ How can attributes of a recorded song be analyzed, and how do these different at
 
 ## Data Source
 
-This is a dataset which was obtained using Spotify's web API.  This dataset was discovered on [Kaggle](https://www.kaggle.com/tomigelo/spotify-audio-features/home?select=SpotifyAudioFeaturesNov2018.csv "Title").
+This dataset was discovered on [Kaggle](https://www.kaggle.com/tomigelo/spotify-audio-features/home?select=SpotifyAudioFeaturesNov2018.csv "Title").
 
 ## Data Description
 
@@ -49,7 +49,7 @@ With the remaining data, I wanted to distribute it fairly evenly into similar si
 
 ## Visualization
 
-I plotted the distributions of each subset together for each song attribute against popularity.  This gave a very clear visual of some possible correlations.  The three distributions that visually stood out to me the most were loudness, energy, and danceability.  I think the plots of these three distributions clearly show that there is indeed a correlation with popularity. 
+I plotted the distributions of each subset together for each song attribute against popularity.  This gave a very clear visual of some possible correlations.  The three distributions that visually stood out to me the most were loudness, energy, and danceability.  I think the plots of these three distributions clearly show that there is indeed a correlation with popularity.
 
 ### Popularity: A measure from 0 to 100 that represents a song's popularity on Spotify
 
@@ -99,11 +99,11 @@ To look into these correlations further, I decided to use the Spearman Correlati
 
 My findings convinced me that there is a statistically significant correlation between popularity and a song's attributes. The correlation between loudness and popularity stands out the most.  The attribute I am surprised by the most though is time aspect of a song.  I know that people have a short attention span, and was assuming I would see more of a correlation between popularity increasing as a song's length was shorter.
 
-Another area that caught my attention was the variance between subsets for each attribute.  As the popularity decreased, the the attribute varied more.  A lot of attributes had similar means, but what this tells me is that drifting away from those averages brings popularity down.
+Another area that caught my attention was the variance between subsets for each attribute.  As the popularity decreased, the variance increased.  A lot of attributes had similar means across all subsets, but what this tells me is that drifting away from those averages brings popularity down.
 
 ## Further Exploration
 
-I hope to further investigate the relationships between loudness, danceability, energy and tempo.  These four attributes seem like they all work together in some way.
+I hope to further investigate the relationships between loudness, danceability and energy.  These three attributes seem like they all work together in some way.
 
 I would like to create an algorithm that does all of the work of separating the data set into smaller, fairly evenly distributed subsets.  This algorithm would be the final piece needed to create more of a pipline to make it easier to run an analysis on any other attribute.
 
