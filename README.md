@@ -61,26 +61,21 @@
 ### energy: Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity.
 ![energy](/images/energy.png)
 
-
+### liveness: Detects the presence of an audience in the recording from 0.0 to 1.0.
 ![liveness](/images/liveness.png)
 
-liveness: Detects the presence of an audience in the recording from 0.0 to 1.0.
-
-
+### loudness: The overall loudness of a track in decibels (dB) between -60 and 0 db.
 ![loudness](/images/loudness.png)
 
-loudness: The overall loudness of a track in decibels (dB) between -60 and 0 db.
-
+### tempo: The overall estimated tempo of a track in beats per minute (BPM).
 ![tempo](/images/tempo.png)
 
-tempo: The overall estimated tempo of a track in beats per minute (BPM).
-
+### valence: A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track.
 ![valence](/images/valence.png)
 
-valence: A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track.
 
 
-- To look into this further, I decided to use the Spearman Correlation testing method to assesses how well the relationship between two attributes can be described.  I found the following correlations with popularity:
+- To look into these correlations further, I decided to use the Spearman Correlation testing method to assess how well the relationship between two attributes can be described.  I found the following correlations with popularity:
 
     - Loudness-
         - Correlation of 0.263, with a p-value of 0.0.
