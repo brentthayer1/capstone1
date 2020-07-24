@@ -161,7 +161,7 @@ def plot_scatter(ax, df_, column, against, low, high):
         Scatter plot of specified columns
     """
 
-    ax.scatter(df_[column], df_[against], s=0.5, alpha=0.6)
+    ax.scatter(df_[column], df_[against], s=0.5, alpha=0.3, marker='.')
     ax.set_xlim(low, high)
     ax.set_xlabel(column)
     ax.set_ylabel(against)
@@ -215,6 +215,7 @@ def master_plotter(df_lst, df_name_lst, column, against, low, high, fs):
     for df_ in df_lst:
         plot_dists_cdf(ax[0][0], df_, column, low, high)
         plot_dists_pdf(ax[0][1], df_, column, low, high)
+        ax[0][1].set_yticks([])
         plot_scatter(ax[1][0], df_, column, against, low, high)
         ax[1][1].set_xticks([])
         ax[1][1].set_yticks([])
