@@ -29,25 +29,21 @@
 - I plotted the remaining song's attributes against popularity to try to get a visual to see where any correlations might be.  To better visualize the correlation, I decided to break the dataset into smaller datasets based on popularity rating.  The main set I was looking for was the most popular songs, the best of the best.  After exploring the popularity, I settled on selecting the top 0.13% of the songs as the most popular.  What was very interesting was that this small percentage covered popularity ratings from 86 to 100, 138 songs in all.  This set was given the name df_86.
 
 - With the remaining data, I wanted to distribute it fairly evenly into similar sized groups.  My group selections were based on the following popularity ratings:
-    -   df_52:  13,680 songs
-        12.9% percent of the dataset.   52 < Popularity >= 86
-    -   df_41:  13,267 songs
-        12.51% percent of the dataset.   41 < Popularity >= 52
-    -   df_33:  12,794 songs
-        12.07% percent of the dataset.   33 < Popularity >= 41
-    -   df_26:  14,363 songs
-        13.54% percent of the dataset.    26 < Popularity >= 33
-    -   df_20:  13,562 songs
-        12.79% percent of the dataset.     20 < Popularity >= 26
-    -   df_14:  14,268 songs
-        13.46% percent of the dataset.    14 < Popularity >= 20
-    -   df_7:   14,447 songs
-        13.62% percent of the dataset.   7 < Popularity >= 14
-    -   df_1:    9,521 songs
-        8.98% percent of the dataset.   1 < Popularity >= 7
+
+| Subset   | Songs  | Percent of Data | Popularity   |
+| -------- | ------ | --------------- | ------------ |
+| df_52:   | 13,680 |       12.9%     | 52 < p >= 86 |
+| df_41:   | 13,267 |       12.51%    | 41 < p >= 52 |
+| df_33:   | 12,794 |       12.07%    | 33 < p >= 41 |
+| df_26:   | 14,363 |       13.54%    | 26 < p >= 33 |
+| df_20:   | 13,562 |       12.79%    | 20 < p >= 26 |
+| df_14:   | 14,268 |       13.46%    | 14 < p >= 20 |
+| df_7:    | 14,447 |       13.62%    | 7 < p >= 14  |
+| df_1:    |  9,521 |       8.98%     | 1 < p >= 7   |
 
 - I plotted the distributions of each subset together for each song attribute against popularity.  This gave a very nice clear view of some possible correlations.  The distributions that visually stood out to me the most were loudness, energy, and danceability.  I think the plots of these distributions clearly show that there is some sort of correlation with popularity.
 
+## popularity: A measure from 0 to 100 that represents a song's popularity on Spotify
 
 ### time_seconds: The duration of the track in seconds.
 ![time_seconds](/images/time_seconds.png)
@@ -58,7 +54,7 @@
 ### danceability: How suitable a track is for dancing. A value of 0.0 is least danceable and 1.2. is most danceable.
 ![danceability](/images/danceability.png)
 
-### energy: Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity.
+### energy: A measure from 0.0 to 1.0 that represents a perceptual measure of intensity and activity.
 ![energy](/images/energy.png)
 
 ### liveness: Detects the presence of an audience in the recording from 0.0 to 1.0.
@@ -113,3 +109,24 @@ To better a song's chance of being popular on Spotify, the main area of interest
 I hope to further investigate the relationships between loudness, danceability, energy and tempo.  These four attributes seem like they all work together in some way.
 
 ![scatter_matrix](/images/scatter_matrix.png)
+
+
+
+
+
+-   df_52:  13,680 songs
+    12.9% percent of the dataset.   52 < Popularity >= 86
+-   df_41:  13,267 songs
+    12.51% percent of the dataset.   41 < Popularity >= 52
+-   df_33:  12,794 songs
+    12.07% percent of the dataset.   33 < Popularity >= 41
+-   df_26:  14,363 songs
+    13.54% percent of the dataset.    26 < Popularity >= 33
+-   df_20:  13,562 songs
+    12.79% percent of the dataset.     20 < Popularity >= 26
+-   df_14:  14,268 songs
+    13.46% percent of the dataset.    14 < Popularity >= 20
+-   df_7:   14,447 songs
+    13.62% percent of the dataset.   7 < Popularity >= 14
+-   df_1:    9,521 songs
+    8.98% percent of the dataset.   1 < Popularity >= 7
