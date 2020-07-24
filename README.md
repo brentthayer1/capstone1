@@ -24,7 +24,7 @@ Each song is classified by 14 qualities: Acousticness, Danceability, Duration, E
 
 For this project, I have ommitted Instrumentalness, Speechiness, Time Signature, Key, and Mode.  These attributes were relatively distributed evenly across the dataset, leaving for little to analyze in terms of a correlation between themselves and popularity.
 
-In the initial dataset there were 130,663 songs.  22,106 of these scored a 0 and 1 for popularity.  I thought this was very interesting, and could not wrap my mind around how 17% of songs would be this low.  I found it hard to believe that even the worst of the worst songs would still be considered a 0 or a 1.  I decided after careful consideration to omit these.  My thoughts are that they could have possibly been NaNs initially at some point.  This omission slimmed the dataset down to 106,040 songs.
+In the initial dataset there were 130,663 songs.  17% of these scored a 0 and 1 for popularity.  I thought this was very interesting, and could not wrap my mind around how this percentage of the songs could be this low.  I found it hard to believe that even the worst of the worst songs would still be considered a 0 or a 1.  I decided after careful consideration to omit these.  My thoughts are that they could have possibly been NaNs initially at some point.  This omission slimmed the dataset down to 108,557 songs.
 
 ![attribute_dists](/images/attribute_dists.png)
 
@@ -48,7 +48,7 @@ With the remaining data, I wanted to distribute it fairly evenly into similar si
 
 ## Visualization
 
-I plotted the distributions of each subset together for each song attribute against popularity.  This gave a very clear visual of some possible correlations.  The three distributions that visually stood out to me the most were loudness, energy, and danceability.  I think the plots of these three distributions clearly show that there is indeed a correlation with popularity.
+I plotted the distributions of each subset together for each song attribute against popularity.  This gave a very clear visual of some possible correlations.  The three distributions that visually stood out to me the most were loudness, energy, and danceability.  I think the plots of these three distributions clearly show that there is indeed a correlation with popularity. 
 
 ### Popularity: A measure from 0 to 100 that represents a song's popularity on Spotify
 
