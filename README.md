@@ -1,4 +1,4 @@
-![main](/images/waveform4.jpg)
+![main](/images/waveform4.png)
 
 # What Makes A Song Popular
 
