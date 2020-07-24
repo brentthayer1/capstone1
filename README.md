@@ -1,6 +1,6 @@
 ![main](/images/waveform4.png)
 
-# What Makes A Song Popular
+# What Makes A Song Popular?
 
 ## Topic
 
@@ -10,13 +10,15 @@ How can attributes of a recorded song be analyzed, and how do these different at
 
 - I am seeking a better understanding of how different attributes of a song correlate to each other.
 - I plan to do a comparative analysis on attribute's rankings using the Spearman Correlation testing method.
-- After looking through the data initially, there are a few key attributes that I really want to explore.  I am most interested in seeing the correlation between popularity and loudness.  My hypothesis going in is that a louder song is more popular.  I am curious as to how to put a number on this correlation though.  My secondary hypothesis is that a song's length has an impact on popularity as well.  Given the short attention span of the general population, I would assume that a shorter song length would increase the popularity to some degree.
+- After looking through the data initially, there are a few key attributes that I really want to explore.  I am most interested in seeing the correlation between popularity and loudness.  My hypothesis going into this is that a louder song is more popular.  I am curious as to how to put a number on this correlation though.  My secondary hypothesis is that a song's length has an impact on popularity as well.  Given the short attention span of the general population, I would assume that a shorter song length would increase the popularity to some degree.
 
 ## Data Source
 
 This is a dataset which was obtained using Spotify's web API.  This dataset was discovered on [Kaggle](https://www.kaggle.com/tomigelo/spotify-audio-features/home?select=SpotifyAudioFeaturesNov2018.csv "Title").
 
 ## Data Description
+
+This dataset is from April 2019
 
 Each song is classified by 14 qualities: Acousticness, Danceability, Duration, Energy, Instrumentalness, Key, Liveness, Loudness, Mode, Speechiness, Tempo, Time_signature, Valence and Popularity.
 
