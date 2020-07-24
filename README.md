@@ -2,13 +2,13 @@
 
 ## Topics
 
-- How can attributes of a recorded song be analyzed, and how do these different attribute affect the popularity of a song on a streaming service like Spotify?
+- How can attributes of a recorded song be analyzed, and how do these different attributes affect the popularity of a song on a streaming service like Spotify?
 
 ## Description
 
-- I am curious as to how songs can be analyzed to look for trends and formulate a way to predict the success of a song on Spotify.
+- I am curious what trends lay within different aspects of a song.
 - I plan to do a comparative analysis on attribute's rankings using the Spearman Correlation testing method.
-- As an audio engineer, there are a few key attributes that I really want to explore, the main one being loudness.
+- After looking through the data initially, there are a few key attributes that I really want to explore.  I am most interested in seeing the correlation between popularity and loudness.
 
 ## Data Source
 
