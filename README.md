@@ -49,18 +49,18 @@
 - I plotted the distributions of each subset together for each song attribute against popularity.  This gave a very nice clear view of some possible correlations.  The distributions that visually stood out to me the most were loudness, energy, and danceability.  I think the plots of these distributions clearly show that there is some sort of correlation with popularity.
 
 
+### time_seconds: The duration of the track in seconds.
 ![time_seconds](/images/time_seconds.png)
-time_seconds: The duration of the track in seconds.
 
+### acousticness: A confidence measure from 0.0 to 1.0 of whether the track is acoustic.
 ![acousticness](/images/acousticness.png)
-- acousticness: A confidence measure from 0.0 to 1.0 of whether the track is acoustic.
 
+### danceability: How suitable a track is for dancing. A value of 0.0 is least danceable and 1.2. is most danceable.
 ![danceability](/images/danceability.png)
-danceability: How suitable a track is for dancing. A value of 0.0 is least danceable and 1.2. is most danceable.
 
+### energy: Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity.
 ![energy](/images/energy.png)
 
-energy: Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity.
 
 ![liveness](/images/liveness.png)
 
