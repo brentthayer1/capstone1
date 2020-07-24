@@ -1,4 +1,4 @@
-ADD A PICTURE
+![main](/images/waveform.jpg)
 
 # What Makes A Song Popular
 
@@ -101,6 +101,4 @@ I also hope to pull in some data on possibly location of where common listeners 
 
 ## References
 
-
-![scatter_matrix](/images/scatter_matrix.png)
 
