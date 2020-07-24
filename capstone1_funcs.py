@@ -74,7 +74,7 @@ def check_for_nans(df, cols):
     """
 
     for col in cols:
-        print(f'NaNs in {col}:', df['acousticness'].isnull().sum())
+        print(f'NaNs in {col}:', df[col].isnull().sum())
 
 
 def plot_hist_and_means(ax, df_, column):
