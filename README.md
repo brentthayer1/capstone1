@@ -47,39 +47,10 @@ With the remaining data, I wanted to distribute it fairly evenly into similar si
 | df_7     | 14,447 |       13.62%    | > 7, <= 14   |
 | df_1     | 12,038 |       11.35%    | > 1, <= 7    |
 
-## Visualization
 
-I plotted the distributions of each subset together for each song attribute against popularity.  This gave a very clear visual of some possible correlations.  The three distributions that visually stood out to me the most were loudness, energy, and danceability.  I think the plots of these three distributions clearly show that there is indeed a correlation with popularity.
+## Correlation
 
-### Popularity: A measure from 0 to 100 that represents a song's popularity on Spotify
-
-### Time: The duration of the track in seconds.
-![time_seconds](/images/time_seconds.png)
-
-### Acousticness: How acoustic a song is.  A value of 0.0 is the least acoustic and 1.0 is the most acoustic.
-![acousticness](/images/acousticness.png)
-
-### Danceability: How suitable a track is for dancing. A value of 0.0 is least danceable and 1.2 is most danceable.
-![danceability](/images/danceability.png)
-
-### Energy: A perceptual measure of how energetic a song is.  A value of 0.0 is least energetic and 1.0 is is most energetic.
-![energy](/images/energy.png)
-
-### Liveness: Detects the presence of an audience.  A value of 0.0 is no audience and 1.0 is entirely live.
-![liveness](/images/liveness.png)
-
-### Loudness: The overall loudness of a track in decibels.  A value of -60 is quiet and 0 db is loudest.
-![loudness](/images/loudness.png)
-
-### Tempo: The overall estimated tempo of a track in beats per minute.
-![tempo](/images/tempo.png)
-
-### Valence: The musical positiveness conveyed by a track.  A value of 0.0 has the lowest positivty and 1.0 has the highest positivity.
-![valence](/images/valence.png)
-
-## Correlation Testing
-
-To look into these correlations further, I decided to use the Spearman Correlation testing method to assess how well the relationship between two attributes can be described.  I found the following correlations with popularity:
+I was very interested in the correlations that exist between each attribute and popularity.  To investigate these correlations further I compared different attributes against popularity using the Spearman Correlation testing method to assess how well the relationship between two attributes can be described.  I found the following correlations with popularity:
 
 | Attribute    | Correlation | P-Value    |
 | :----------: | :---------: | :--------: |
@@ -92,8 +63,21 @@ To look into these correlations further, I decided to use the Spearman Correlati
 | liveness     | -0.024      | 4.102e-15  |
 | acousticness | -0.099      | 1.229e-228 |
 
-![attribute_heat_map](/images/attribute_heat_map.png)
+## Visualization
 
+I plotted the distributions of each subset together for each song attribute against popularity.  This gave a very clear visual of some possible correlations.  The three distributions that visually stood out to me the most were loudness, danceability, and energy.  I think the plots of these three distributions clearly show that there is indeed a correlation with popularity.
+
+### Popularity: A measure from 0 to 100 that represents a song's popularity on Spotify
+
+### Loudness: The overall loudness of a track in decibels.  A value of -60 is quiet and 0 db is loudest.
+![loudness](/images/loudness.png)
+
+### Energy: A perceptual measure of how energetic a song is.  A value of 0.0 is least energetic and 1.0 is is most energetic.
+![energy](/images/energy.png)
+
+### Danceability: How suitable a track is for dancing. A value of 0.0 is least danceable and 1.2 is most danceable.
+![danceability](/images/danceability.png)
+## Correlation Testing
 
 ## Conclusion
 
@@ -110,3 +94,5 @@ I would like to create an algorithm that does all of the work of separating the 
 I think it would be interested to pull information into here about genre as well.
 
 I also hope to pull in some data on locations of where common listeners are located.  I think it would be interesting to see how different parts of the country prefer their music.
+
+![attribute_heat_map](/images/attribute_heat_map.png)
