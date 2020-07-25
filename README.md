@@ -77,7 +77,6 @@ I plotted the distributions of each subset together for each song attribute agai
 
 ### Danceability: How suitable a track is for dancing. A value of 0.0 is least danceable and 1.2 is most danceable.
 ![danceability](/images/danceability.png)
-## Correlation Testing
 
 ## Conclusion
 
